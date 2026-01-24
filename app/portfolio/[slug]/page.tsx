@@ -2,13 +2,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
-import type { Components } from 'react-markdown'
 import Container from '@/components/ui/Container'
 import Section from '@/components/ui/Section'
 import FadeIn from '@/components/ui/FadeIn'
 import ExploreMoreWork from '@/components/ExploreMoreWork'
+import CaseStudyContent from '@/components/CaseStudyContent'
 import { getCaseStudy, getCaseStudies } from '@/lib/content'
 
 interface CaseStudyPageProps {
@@ -80,10 +78,14 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 <span className="text-sm text-foreground/50">
                   {caseStudy.client}
                 </span>
-                <span className="text-sm text-foreground/30">•</span>
-                <span className="text-sm text-foreground/50">
-                  {caseStudy.year}
-                </span>
+                {caseStudy.year && (
+                  <>
+                    <span className="text-sm text-foreground/30">•</span>
+                    <span className="text-sm text-foreground/50">
+                      {caseStudy.year}
+                    </span>
+                  </>
+                )}
               </div>
               <h1 className="text-display-md md:text-display-lg lg:text-display-xl font-bold mb-6">
                 {caseStudy.title}
@@ -130,51 +132,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           <div className="max-w-4xl mx-auto">
             <FadeIn delay={0.2}>
               <article className="prose prose-lg prose-neutral max-w-none prose-headings:font-display prose-headings:font-bold prose-h2:text-3xl md:text-4xl prose-h2:mt-16 prose-h2:mb-8 prose-h2:pt-8 prose-h2:border-t prose-h2:border-neutral-200 dark:prose-h2:border-neutral-800 prose-h3:text-xl md:text-2xl prose-h3:mt-10 prose-h3:mb-6 prose-p:text-foreground/70 prose-p:leading-relaxed prose-p:text-base md:prose-p:text-lg prose-p:mb-6 prose-ul:text-foreground/70 prose-li:marker:text-foreground/40 prose-img:rounded-xl prose-img:my-12 prose-img:shadow-lg prose-img:w-full prose-blockquote:border-l-4 prose-blockquote:border-foreground/20 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-foreground/80 prose-blockquote:my-8 prose-blockquote:text-lg">
-                <ReactMarkdown
-                  remarkPlugins={[remarkGfm]}
-                  components={{
-                    img: ({ src, alt }) => {
-                      if (!src || typeof src !== 'string') return null
-                      return (
-                        <div className="my-12 -mx-6 md:-mx-12 lg:-mx-16 xl:-mx-24">
-                          <div className="relative aspect-video rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 shadow-lg">
-                            <Image
-                              src={src}
-                              alt={alt || ''}
-                              fill
-                              className="object-cover"
-                              sizes="100vw"
-                            />
-                          </div>
-                          {alt && (
-                            <p className="text-sm text-foreground/50 mt-3 text-center px-6 md:px-12 lg:px-16 xl:px-24">
-                              {alt}
-                            </p>
-                          )}
-                        </div>
-                      )
-                    },
-                    blockquote: ({ children }) => (
-                      <div className="my-12 p-8 bg-neutral-50 dark:bg-neutral-900/50 rounded-xl border-l-4 border-foreground/20">
-                        <blockquote className="m-0 text-lg md:text-xl italic text-foreground/80 leading-relaxed">
-                          {children}
-                        </blockquote>
-                      </div>
-                    ),
-                    h2: ({ children }) => (
-                      <h2 className="text-3xl md:text-4xl font-bold font-display mt-16 mb-8 pt-8 border-t border-neutral-200 dark:border-neutral-800 first:mt-0 first:pt-0 first:border-0">
-                        {children}
-                      </h2>
-                    ),
-                    p: ({ children }) => (
-                      <p className="text-base md:text-lg text-foreground/70 leading-relaxed mb-6">
-                        {children}
-                      </p>
-                    ),
-                  } as Components}
-                >
-                  {caseStudy.content}
-                </ReactMarkdown>
+                <CaseStudyContent content={caseStudy.content} />
               </article>
             </FadeIn>
           </div>

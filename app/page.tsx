@@ -226,14 +226,9 @@ export default function Home() {
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
-                  <div className="flex items-start justify-between gap-4 mb-2">
-                    <h3 className="text-xl md:text-2xl font-semibold group-hover:text-foreground/70 transition-colors">
-                      {caseStudy.title}
-                    </h3>
-                    <span className="text-sm text-foreground/50 whitespace-nowrap">
-                      {caseStudy.year}
-                    </span>
-                  </div>
+                  <h3 className="text-xl md:text-2xl font-semibold group-hover:text-foreground/70 transition-colors mb-2">
+                    {caseStudy.title}
+                  </h3>
                   <p className="text-foreground/70 mb-3">{caseStudy.summary}</p>
                   <div className="flex flex-wrap gap-2">
                     {caseStudy.tags.map((tag) => (

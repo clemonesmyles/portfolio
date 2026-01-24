@@ -53,14 +53,9 @@ export default function Portfolio() {
                     </div>
 
                     <div className="flex-1 flex flex-col">
-                      <div className="flex items-start justify-between gap-4 mb-3">
-                        <h2 className="text-xl md:text-2xl font-semibold group-hover:text-foreground/70 transition-colors flex-1">
-                          {caseStudy.title}
-                        </h2>
-                        <span className="text-sm text-foreground/50 whitespace-nowrap">
-                          {caseStudy.year}
-                        </span>
-                      </div>
+                      <h2 className="text-xl md:text-2xl font-semibold group-hover:text-foreground/70 transition-colors mb-3">
+                        {caseStudy.title}
+                      </h2>
 
                       <p className="text-sm text-foreground/50 mb-3">
                         {caseStudy.client}
