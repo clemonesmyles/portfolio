@@ -1,7 +1,4 @@
-'use client'
-
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 
 const companies = [
   { name: 'Northwestern Mutual', file: 'NM logo.png' },
@@ -27,49 +24,25 @@ const companies = [
 ]
 
 export default function LogoScroll() {
-  // Duplicate the array for seamless infinite scroll
-  const duplicatedCompanies = [...companies, ...companies]
-
   return (
-    <div className="relative overflow-hidden py-8">
-      {/* Gradient masks on edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white dark:from-neutral-950 to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white dark:from-neutral-950 to-transparent z-10 pointer-events-none" />
-
-      {/* Scrolling container */}
-      <div className="flex gap-12">
-        {/* Animated set */}
-        <motion.div
-          className="flex gap-12 items-center flex-shrink-0"
-          animate={{
-            x: [0, -144 * companies.length - 12 * companies.length],
-          }}
-          transition={{
-            x: {
-              repeat: Infinity,
-              repeatType: 'loop',
-              duration: 55,
-              ease: 'linear',
-            },
-          }}
-        >
-          {duplicatedCompanies.map((company, index) => (
-            <div
-              key={`${company.file}-${index}`}
-              className="flex-shrink-0 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300 relative"
-              style={{ width: '144px', height: '60px' }}
-            >
-              <Image
-                src={`/images/logos/${company.file}`}
-                alt={company.name}
-                fill
-                className="object-contain"
-                sizes="144px"
-                unoptimized
-              />
-            </div>
-          ))}
-        </motion.div>
+    <div className="py-8">
+      <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-8 md:gap-10 items-center justify-items-center">
+        {companies.map((company) => (
+          <div
+            key={company.file}
+            className="grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300 relative"
+            style={{ width: '140px', height: '58px' }}
+          >
+            <Image
+              src={`/images/logos/${company.file}`}
+              alt={company.name}
+              fill
+              className="object-contain"
+              sizes="140px"
+              unoptimized
+            />
+          </div>
+        ))}
       </div>
     </div>
   )

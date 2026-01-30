@@ -3,7 +3,7 @@ title: Improving access to critical information with AI-powered search
 client: Essential Energy
 summary: Led product strategy and human-centred AI design to deliver an AI-powered search and Q&A experience that improves access to critical information for Essential Energy customers.
 year: "2024"
-tags: ["AI/ML", "Utilities", "Search", "Product Strategy"]
+tags: ["AI", "Utilities", "Search", "Product Strategy"]
 image: /images/projects/essential-energy-ai/hero.jpg
 ---
 

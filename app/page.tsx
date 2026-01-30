@@ -27,44 +27,46 @@ export default function Home() {
       {/* Hero Section */}
       <Section className="pt-24 md:pt-32 lg:pt-40 pb-16 md:pb-24 bg-white dark:bg-background">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-start">
+            <div className="max-w-4xl">
               <FadeIn>
                 <h1 className="text-display-lg md:text-display-xl lg:text-display-2xl font-bold text-balance mb-6">
-                  Product strategist and design leader turning ambiguity into
-                  clarity.
+                  Product strategist and design leader turning{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">ambiguity</span>{' '}
+                  into{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-600">clarity</span>.
                 </h1>
               </FadeIn>
               <FadeIn delay={0.1}>
-                <p className="text-lg md:text-xl text-foreground/70 leading-relaxed mb-8">
+                <p className="text-lg md:text-xl text-foreground/70 leading-relaxed mb-8 max-w-2xl">
                   I specialize in early-stage discovery, AI-powered solutions,
                   and evidence-based strategy that drives meaningful outcomes.
                 </p>
               </FadeIn>
               <FadeIn delay={0.2}>
-                <div className="flex flex-wrap gap-4">
-                  <Button href="/portfolio" className="shadow-lg shadow-foreground/10 hover:shadow-xl hover:shadow-foreground/20 transition-shadow">View my work</Button>
-                  <Button
-                    href={`mailto:${siteConfig.contact.email}`}
-                    variant="secondary"
-                    className="border-2 hover:bg-neutral-50 dark:hover:bg-neutral-900"
-                  >
-                    Get in touch
-                  </Button>
-                </div>
+                <Button href="/portfolio" className="shadow-lg shadow-foreground/10 hover:shadow-xl hover:shadow-foreground/20 transition-shadow">View my work</Button>
               </FadeIn>
             </div>
-            <FadeIn delay={0.3} className="relative">
-              <div className="aspect-square relative rounded-2xl overflow-hidden bg-gradient-to-br from-accent-100 via-accent-200 to-accent-300 dark:from-accent-900 dark:via-accent-800 dark:to-accent-700 p-1">
-                <div className="w-full h-full rounded-xl overflow-hidden">
+            <FadeIn delay={0.3} className="relative hidden lg:block self-start mt-2">
+              {/* B&W headshot with geometric frame */}
+              <div className="relative w-48 h-48 xl:w-52 xl:h-52">
+                {/* Geometric frame elements */}
+                <div className="absolute -top-3 -right-3 w-24 h-24 border-4 border-emerald-400/80 rounded-lg" />
+                <div className="absolute -bottom-3 -left-3 w-20 h-20 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-lg" />
+                <div className="absolute top-1/2 -left-4 w-8 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full" />
+                <div className="absolute -bottom-2 right-1/4 w-1 h-8 bg-gradient-to-b from-emerald-400 to-teal-500 rounded-full" />
+                {/* Main image */}
+                <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-xl">
                   <Image
                     src="/images/headshot/headshot.jpg"
                     alt="Myles Clemones"
                     fill
-                    className="object-cover"
+                    className="object-cover grayscale"
                     priority
                   />
                 </div>
+                {/* Corner accent */}
+                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-sm" />
               </div>
             </FadeIn>
           </div>
@@ -251,6 +253,18 @@ export default function Home() {
         </Container>
       </Section>
 
+      {/* Client Logos Section */}
+      <Section className="bg-white dark:bg-neutral-950">
+        <Container>
+          <FadeIn>
+            <p className="text-center text-sm text-foreground/50 mb-8 max-w-3xl mx-auto">
+              I've partnered with local and international organisations across financial services, insurance, government, healthcare, energy, and tech — from Fortune 500 enterprises to scale-ups and start-ups
+            </p>
+          </FadeIn>
+          <LogoScroll />
+        </Container>
+      </Section>
+
       {/* Testimonials Section */}
       <Section className="bg-neutral-50 dark:bg-neutral-900/30 border-y border-neutral-200 dark:border-neutral-800">
         <Container>
@@ -364,18 +378,6 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* Client Logos Section */}
-      <Section className="bg-white dark:bg-neutral-950">
-        <Container>
-          <FadeIn>
-            <h2 className="text-center text-sm font-medium text-foreground/50 mb-8 uppercase tracking-wider">
-              Organizations I've worked with
-            </h2>
-          </FadeIn>
-          <LogoScroll />
-        </Container>
-      </Section>
-
       {/* CTA Section */}
       <Section className="bg-foreground text-background border-y border-neutral-700">
         <Container>
@@ -392,16 +394,18 @@ export default function Home() {
             </FadeIn>
             <FadeIn delay={0.1}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button href={`mailto:${siteConfig.contact.email}`} className="bg-background text-foreground hover:bg-background/90 shadow-lg">
-                  Email me
-                </Button>
-                <Button
-                  href={siteConfig.contact.linkedin}
-                  variant="secondary"
-                  className="border-2 border-background/30 text-background hover:bg-background/10"
+                <Link
+                  href={`mailto:${siteConfig.contact.email}`}
+                  className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium bg-white text-neutral-900 hover:bg-neutral-100 shadow-lg transition-all duration-200 hover:scale-[1.02]"
                 >
-                  Connect on LinkedIn
-                </Button>
+                  Email me
+                </Link>
+                <Link
+                  href={siteConfig.contact.linkedin}
+                  className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium bg-white text-neutral-900 hover:bg-neutral-100 shadow-lg transition-all duration-200 hover:scale-[1.02]"
+                >
+                  LinkedIn
+                </Link>
               </div>
             </FadeIn>
           </div>

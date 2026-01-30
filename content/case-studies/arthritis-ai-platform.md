@@ -3,7 +3,7 @@ title: Improving health outcomes with AI-powered technology
 client: Arthritis NSW
 summary: Led product strategy and human-centered AI design to create Clara, a digital platform that empowers people living with arthritis through personalised, AI-enabled support.
 year: "2023"
-tags: ["AI/ML", "Healthcare", "Platform Strategy", "Product Leadership"]
+tags: ["AI", "Healthcare", "Platform Strategy", "Product Leadership"]
 image: /images/projects/arthritis-ai-platform/hero.jpg
 ---
 

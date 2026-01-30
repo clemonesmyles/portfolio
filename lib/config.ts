@@ -10,7 +10,6 @@ export const siteConfig = {
   },
   navigation: [
     { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Writing', href: '/writing' },
     { name: 'About', href: '/about' },
   ],
 }

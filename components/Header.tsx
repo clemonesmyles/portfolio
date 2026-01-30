@@ -47,7 +47,7 @@ export default function Header() {
                 href={`mailto:${siteConfig.contact.email}`}
                 className="inline-flex items-center justify-center rounded-full bg-foreground px-5 py-2 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
               >
-                Get in touch
+                Email me
               </Link>
             </nav>
 

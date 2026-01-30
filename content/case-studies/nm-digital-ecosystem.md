@@ -84,3 +84,28 @@ The vision culminated in a series of conceptual designs illustrating key moments
 This work gave Northwestern Mutual a clear, shared picture of what its digital ecosystem could become. It aligned stakeholders around a common direction, provided product teams with scenarios they could build toward, and established design patterns that would scale across the platform.
 
 Most importantly, it reframed the conversation from features and systems to people and experiences. The vision wasn't about technology — it was about creating the conditions for advisors to thrive, clients to feel supported, and the organisation to deliver on its promise of financial security.
+
+## The full vision deck
+
+The complete vision deck brought together strategy, scenarios, and conceptual designs into a single narrative. Each slide built on the last — from business context through user journeys to detailed experience concepts.
+
+![deck: Title](/images/projects/nm-digital-ecosystem/deck/deck-01.png)
+![deck: Introduction](/images/projects/nm-digital-ecosystem/deck/deck-02.png)
+![deck: Context](/images/projects/nm-digital-ecosystem/deck/deck-03.png)
+![deck: Vision statement](/images/projects/nm-digital-ecosystem/deck/deck-04.png)
+![deck: Strategic themes](/images/projects/nm-digital-ecosystem/deck/deck-05.png)
+![deck: Journey overview](/images/projects/nm-digital-ecosystem/deck/deck-06.png)
+![deck: Meet Britt](/images/projects/nm-digital-ecosystem/deck/deck-07.png)
+![deck: Advisor onboarding](/images/projects/nm-digital-ecosystem/deck/deck-08.png)
+![deck: Learning platform](/images/projects/nm-digital-ecosystem/deck/deck-09.png)
+![deck: Meet the Greenes](/images/projects/nm-digital-ecosystem/deck/deck-10.png)
+![deck: Client discovery](/images/projects/nm-digital-ecosystem/deck/deck-11.png)
+![deck: Planning experience](/images/projects/nm-digital-ecosystem/deck/deck-12.png)
+![deck: Living plan](/images/projects/nm-digital-ecosystem/deck/deck-13.png)
+![deck: Advisor tools](/images/projects/nm-digital-ecosystem/deck/deck-14.png)
+![deck: Community features](/images/projects/nm-digital-ecosystem/deck/deck-15.png)
+![deck: Achievement system](/images/projects/nm-digital-ecosystem/deck/deck-16.png)
+![deck: Year in review](/images/projects/nm-digital-ecosystem/deck/deck-17.png)
+![deck: Platform architecture](/images/projects/nm-digital-ecosystem/deck/deck-18.png)
+![deck: Impact metrics](/images/projects/nm-digital-ecosystem/deck/deck-19.png)
+![deck: Next steps](/images/projects/nm-digital-ecosystem/deck/deck-20.png)

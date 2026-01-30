@@ -12,12 +12,13 @@ interface CaseStudyContentProps {
 }
 
 interface ContentBlock {
-  type: 'markdown' | 'images' | 'side-by-side' | 'showcase' | 'gallery'
+  type: 'markdown' | 'images' | 'side-by-side' | 'showcase' | 'gallery' | 'deck'
   content: string
   images?: { src: string; alt: string }[]
   sideImage?: { src: string; alt: string }
   showcaseImage?: { src: string; alt: string }
   galleryImages?: { src: string; alt: string }[]
+  deckImages?: { src: string; alt: string }[]
 }
 
 function parseContentIntoBlocks(content: string): ContentBlock[] {
@@ -26,6 +27,7 @@ function parseContentIntoBlocks(content: string): ContentBlock[] {
   let currentMarkdown: string[] = []
   let currentImages: { src: string; alt: string }[] = []
   let currentGalleryImages: { src: string; alt: string }[] = []
+  let currentDeckImages: { src: string; alt: string }[] = []
 
   const imageRegex = /^!\[([^\]]*)\]\(([^)]+)\)$/
 
@@ -50,6 +52,13 @@ function parseContentIntoBlocks(content: string): ContentBlock[] {
     if (currentGalleryImages.length > 0) {
       blocks.push({ type: 'gallery', content: '', galleryImages: [...currentGalleryImages] })
       currentGalleryImages = []
+    }
+  }
+
+  const flushDeck = () => {
+    if (currentDeckImages.length > 0) {
+      blocks.push({ type: 'deck', content: '', deckImages: [...currentDeckImages] })
+      currentDeckImages = []
     }
   }
 
@@ -115,8 +124,16 @@ function parseContentIntoBlocks(content: string): ContentBlock[] {
         // Gallery: prefix - collects images for masonry-style grid
         flushMarkdown()
         flushImages()
+        flushDeck()
         const cleanAlt = alt.replace('gallery:', '').trim()
         currentGalleryImages.push({ src, alt: cleanAlt })
+      } else if (alt.startsWith('deck:')) {
+        // Deck: prefix - collects images for presentation deck spread
+        flushMarkdown()
+        flushImages()
+        flushGallery()
+        const cleanAlt = alt.replace('deck:', '').trim()
+        currentDeckImages.push({ src, alt: cleanAlt })
       } else {
         // Regular image
         flushMarkdown()
@@ -128,10 +145,14 @@ function parseContentIntoBlocks(content: string): ContentBlock[] {
     } else if (line.trim() === '' && currentGalleryImages.length > 0) {
       // Empty line while collecting gallery images - continue collecting
       continue
+    } else if (line.trim() === '' && currentDeckImages.length > 0) {
+      // Empty line while collecting deck images - continue collecting
+      continue
     } else {
       // Regular content
       flushImages()
       flushGallery()
+      flushDeck()
       currentMarkdown.push(line)
     }
   }
@@ -140,6 +161,7 @@ function parseContentIntoBlocks(content: string): ContentBlock[] {
   flushMarkdown()
   flushImages()
   flushGallery()
+  flushDeck()
 
   return blocks
 }
@@ -328,6 +350,66 @@ export default function CaseStudyContent({ content }: CaseStudyContentProps) {
                     </button>
                   )
                 })}
+              </div>
+            </div>
+          )
+        }
+
+        if (block.type === 'deck' && block.deckImages && block.deckImages.length > 0) {
+          const images = block.deckImages
+          return (
+            <div key={index} className="my-16 -mx-6 md:-mx-12 lg:-mx-16 xl:-mx-24">
+              {/* Deck header */}
+              <div className="px-6 md:px-12 lg:px-16 xl:px-24 mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-foreground/90">Vision Deck</p>
+                    <p className="text-xs text-foreground/50">{images.length} slides</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Grid deck spread - flows left to right */}
+              <div className="px-3 md:px-6 lg:px-8 xl:px-12">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+                  {images.map((image, imgIndex) => (
+                    <button
+                      key={imgIndex}
+                      onClick={() => setLightboxImage(image)}
+                      className="relative w-full rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800 shadow-md hover:shadow-xl transition-all duration-300 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:ring-offset-2"
+                    >
+                      <div className="relative aspect-[16/9]">
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                          sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                        {/* Slide number badge */}
+                        <div className="absolute top-2 left-2 w-6 h-6 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <span className="text-xs font-medium text-white">{imgIndex + 1}</span>
+                        </div>
+
+                        {/* Expand icon */}
+                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <div className="w-10 h-10 rounded-full bg-white/90 dark:bg-black/90 flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform duration-300">
+                            <svg className="w-5 h-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
           )

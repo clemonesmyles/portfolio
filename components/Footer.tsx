@@ -57,16 +57,6 @@ export default function Footer() {
                   LinkedIn
                 </a>
               </li>
-              <li>
-                <a
-                  href={siteConfig.contact.medium}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-foreground/60 hover:text-foreground transition-colors"
-                >
-                  Medium
-                </a>
-              </li>
             </ul>
           </div>
         </div>

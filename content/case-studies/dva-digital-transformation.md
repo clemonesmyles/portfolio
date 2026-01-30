@@ -3,7 +3,7 @@ title: Transforming veteran support with AI-powered search
 client: Department of Veterans' Affairs (DVA)
 summary: Led product strategy and human-centered AI design to help veterans access trusted information using natural language, while maintaining trust and accountability in a high-stakes government environment.
 year: "2023"
-tags: ["AI/ML", "Government", "Product Strategy", "Human-Centered Design"]
+tags: ["AI", "Government", "Product Strategy", "Human-Centered Design"]
 image: /images/projects/dva-digital-transformation/hero.jpg
 ---
 
