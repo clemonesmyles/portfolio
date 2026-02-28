@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: 'Myles Clemones',
   title: 'Myles Clemones | Product Strategy & Design',
-  description: 'Product strategist and design leader specializing in early-stage discovery, AI-powered solutions, and human-centered design.',
+  description: 'Product strategist and design leader specialising in early-stage discovery, AI-powered solutions, and human-centred design.',
   url: 'https://www.mylesclemones.com',
   contact: {
     email: 'mylesclemones@me.com',

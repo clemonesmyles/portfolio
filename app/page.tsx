@@ -63,7 +63,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
             <FadeIn delay={0.1}>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                I help organizations navigate complexity and uncover the right
+                I help organisations navigate complexity and uncover the right
                 problems to solve. With over a decade of experience across
                 government, finance, healthcare, and tech, I lead
                 cross-functional teams from hypothesis to validated outcomes.
@@ -186,7 +186,7 @@ export default function Home() {
               </h2>
               <p className="text-lg text-foreground/70 max-w-2xl">
                 From AI-powered healthcare platforms to enterprise-wide digital
-                transformation, I partner with organizations to turn strategic
+                transformation, I partner with organisations to turn strategic
                 vision into validated outcomes.
               </p>
             </FadeIn>
@@ -367,7 +367,7 @@ export default function Home() {
               </h2>
               <p className="text-lg text-background/70 mb-8">
                 I'm always interested in hearing about new projects and
-                opportunities to help organizations navigate complexity and
+                opportunities to help organisations navigate complexity and
                 deliver meaningful outcomes.
               </p>
             </FadeIn>

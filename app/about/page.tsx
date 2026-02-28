@@ -206,7 +206,7 @@ export default function About() {
               Who I've worked with
             </h2>
             <p className="text-lg text-foreground/60 mb-8 text-center max-w-2xl mx-auto">
-              Organizations I've partnered with to shape strategy, build products,
+              Organisations I've partnered with to shape strategy, build products,
               and navigate complexity
             </p>
           </FadeIn>

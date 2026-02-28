@@ -6,13 +6,13 @@ title: About
 
 I'm a product strategist and design leader with over 10 years of experience shaping digital platforms, services, and product portfolios across finance, government, healthcare, and tech.
 
-My focus is on navigating ambiguity, uncovering the right problems, and translating complex organizational challenges into clear, insight-led direction and validated strategic outcomes.
+My focus is on navigating ambiguity, uncovering the right problems, and translating complex organisational challenges into clear, insight-led direction and validated strategic outcomes.
 
 ## Approach
 
 Deeply experienced in early-stage discovery and experimentation, I form hypotheses, design lean tests, and guide cross-functional teams toward evidence-based decisions. AI-fluent and hands-on, I use emerging tools daily to accelerate concept development, generate artifacts, and support early-stage thinking.
 
-I've led the introduction of design practice and service design culture across large organizations, involving strategic planning, roadmapping, and advocacy for early, end-to-end experience design engagements.
+I've led the introduction of design practice and service design culture across large organisations, involving strategic planning, roadmapping, and advocacy for early, end-to-end experience design engagements.
 
 ## Experience highlights
 

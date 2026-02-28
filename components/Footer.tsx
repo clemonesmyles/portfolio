@@ -13,7 +13,7 @@ export default function Footer() {
               {siteConfig.name}
             </h3>
             <p className="text-sm text-foreground/60 leading-relaxed">
-              Product strategist and design leader specializing in early-stage
+              Product strategist and design leader specialising in early-stage
               discovery and human-centered solutions.
             </p>
           </div>
