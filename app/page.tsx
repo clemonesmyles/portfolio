@@ -28,17 +28,18 @@ export default function Home() {
       <Section className="pt-24 md:pt-32 lg:pt-40 pb-16 md:pb-24 bg-white dark:bg-background">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-start">
-            <div className="max-w-4xl">
+            <div>
               <FadeIn>
-                <h1 className="text-display-lg md:text-display-xl lg:text-display-2xl font-bold text-balance mb-6">
-                  Product strategist and design leader turning{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">ambiguity</span>{' '}
+                <h1 className="text-display-xl md:text-display-2xl lg:text-display-2xl xl:text-display-3xl font-bold mb-6">
+                  Product strategist and<br className="hidden lg:block" />
+                  {' '}design leader turning<br className="hidden lg:block" />
+                  {' '}<span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">ambiguity</span>{' '}
                   into{' '}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-600">clarity</span>.
                 </h1>
               </FadeIn>
               <FadeIn delay={0.1}>
-                <p className="text-lg md:text-xl text-foreground/70 leading-relaxed mb-8 max-w-2xl">
+                <p className="text-xl md:text-2xl text-foreground/70 leading-relaxed mb-8 max-w-3xl">
                   I specialize in early-stage discovery, AI-powered solutions,
                   and evidence-based strategy that drives meaningful outcomes.
                 </p>
@@ -47,28 +48,6 @@ export default function Home() {
                 <Button href="/portfolio" className="shadow-lg shadow-foreground/10 hover:shadow-xl hover:shadow-foreground/20 transition-shadow">View my work</Button>
               </FadeIn>
             </div>
-            <FadeIn delay={0.3} className="relative hidden lg:block self-start mt-2">
-              {/* B&W headshot with geometric frame */}
-              <div className="relative w-48 h-48 xl:w-52 xl:h-52">
-                {/* Geometric frame elements */}
-                <div className="absolute -top-3 -right-3 w-24 h-24 border-4 border-emerald-400/80 rounded-lg" />
-                <div className="absolute -bottom-3 -left-3 w-20 h-20 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-lg" />
-                <div className="absolute top-1/2 -left-4 w-8 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full" />
-                <div className="absolute -bottom-2 right-1/4 w-1 h-8 bg-gradient-to-b from-emerald-400 to-teal-500 rounded-full" />
-                {/* Main image */}
-                <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/images/headshot/headshot.jpg"
-                    alt="Myles Clemones"
-                    fill
-                    className="object-cover grayscale"
-                    priority
-                  />
-                </div>
-                {/* Corner accent */}
-                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-sm" />
-              </div>
-            </FadeIn>
           </div>
         </Container>
       </Section>
@@ -116,7 +95,7 @@ export default function Home() {
               <FadeIn delay={0.4}>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">
-                    AI integration and enablement
+                    AI strategy & adoption
                   </h3>
                   <p className="text-foreground/70">
                     Prototyping AI-powered concepts, assessing feasibility, and
@@ -159,13 +138,13 @@ export default function Home() {
               <FadeIn delay={0.15}>
                 <SkillCard
                   icon={<SparklesIcon />}
-                  title="AI Integration"
+                  title="AI Strategy & Adoption"
                 />
               </FadeIn>
               <FadeIn delay={0.2}>
                 <SkillCard
                   icon={<PenToolIcon />}
-                  title="Design Thinking"
+                  title="HCD AI"
                 />
               </FadeIn>
               <FadeIn delay={0.25}>
@@ -222,7 +201,7 @@ export default function Home() {
                 >
                   <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 mb-4 border border-neutral-200 dark:border-neutral-700">
                     <Image
-                      src={caseStudy.image}
+                      src={caseStudy.thumbnail || caseStudy.image}
                       alt={caseStudy.title}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"

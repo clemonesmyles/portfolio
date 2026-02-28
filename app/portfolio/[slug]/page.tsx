@@ -49,8 +49,19 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
   return (
     <>
-      {/* Hero */}
-      <Section className="pt-24 md:pt-32 pb-0">
+      {/* Cover Image */}
+      <div className="relative w-full aspect-[16/9] bg-neutral-100">
+        <Image
+          src={caseStudy.image}
+          alt={caseStudy.title}
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+
+      {/* Header */}
+      <Section className="pt-12 md:pt-16 pb-0">
         <Container>
           <FadeIn>
             <Link
@@ -104,23 +115,6 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                   {tag}
                 </span>
               ))}
-            </div>
-          </FadeIn>
-        </Container>
-      </Section>
-
-      {/* Hero Image */}
-      <Section className="pt-0 pb-12">
-        <Container>
-          <FadeIn delay={0.1}>
-            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-neutral-100">
-              <Image
-                src={caseStudy.image}
-                alt={caseStudy.title}
-                fill
-                className="object-cover"
-                priority
-              />
             </div>
           </FadeIn>
         </Container>

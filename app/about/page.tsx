@@ -44,7 +44,7 @@ export default function About() {
               </FadeIn>
             </div>
             <FadeIn delay={0.1} className="lg:col-span-2">
-              <div className="aspect-square relative rounded-2xl overflow-hidden bg-gradient-to-br from-accent-100 to-accent-200 dark:from-accent-900/20 dark:to-accent-800/20">
+              <div className="w-3/5 aspect-square relative rounded-2xl overflow-hidden bg-gradient-to-br from-accent-100 to-accent-200 dark:from-accent-900/20 dark:to-accent-800/20">
                 <Image
                   src="/images/headshot/headshot.jpg"
                   alt="Myles Clemones"
@@ -228,10 +228,7 @@ export default function About() {
                 complex environments.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button href={`mailto:${siteConfig.contact.email}`}>
-                  Email me
-                </Button>
-                <Button href={siteConfig.contact.linkedin} variant="secondary">
+                <Button href={siteConfig.contact.linkedin}>
                   LinkedIn
                 </Button>
               </div>

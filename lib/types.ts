@@ -6,6 +6,7 @@ export interface CaseStudy {
   year: string
   tags: string[]
   image: string
+  thumbnail?: string
   content: string
   context?: string
   problem?: string

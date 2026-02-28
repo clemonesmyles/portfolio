@@ -45,7 +45,7 @@ export default function Portfolio() {
                   <article className="h-full flex flex-col">
                     <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-neutral-100 mb-5">
                       <Image
-                        src={caseStudy.image}
+                        src={caseStudy.thumbnail || caseStudy.image}
                         alt={caseStudy.title}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"

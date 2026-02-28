@@ -41,14 +41,6 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href={`mailto:${siteConfig.contact.email}`}
-                  className="text-sm text-foreground/60 hover:text-foreground transition-colors"
-                >
-                  Email
-                </a>
-              </li>
-              <li>
-                <a
                   href={siteConfig.contact.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"

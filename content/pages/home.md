@@ -13,6 +13,6 @@ My work centers on:
 
 - **Early-stage discovery and experimentation** — forming hypotheses, designing lean tests, and guiding teams toward evidence-based decisions
 - **Strategic product leadership** — defining vision, positioning, and roadmaps that balance user needs with commercial impact
-- **AI integration and enablement** — prototyping AI-powered concepts, assessing feasibility, and helping teams adopt faster, AI-enabled ways of working
+- **AI strategy & adoption** — prototyping AI-powered concepts, assessing feasibility, and helping teams adopt faster, AI-enabled ways of working
 
 I partner with C-suite stakeholders to translate complex organizational challenges into clear, actionable direction and validated strategic outcomes.

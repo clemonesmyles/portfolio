@@ -48,6 +48,7 @@ const config: Config = {
         display: ['Cabinet Grotesk', 'Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
+        'display-3xl': ['5.5rem', { lineHeight: '1.05', letterSpacing: '-0.03em' }],
         'display-2xl': ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
         'display-xl': ['3.75rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
         'display-lg': ['3rem', { lineHeight: '1.2', letterSpacing: '-0.02em' }],

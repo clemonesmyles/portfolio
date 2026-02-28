@@ -29,7 +29,7 @@ Delivered service design, user experience solutions, and design thinking trainin
 
 - Early-stage discovery, hypothesis development, and assumption testing
 - C-suite stakeholder engagement and senior leadership relationships
-- Design thinking and innovation leadership
+- HCD AI
 - Creative problem-solving and design sprint facilitation
 - Concept, prototype, and product design with varying levels of fidelity
 - Defining vision and strategic narratives

@@ -44,10 +44,10 @@ export default function Header() {
                 )
               })}
               <Link
-                href={`mailto:${siteConfig.contact.email}`}
+                href={siteConfig.contact.linkedin}
                 className="inline-flex items-center justify-center rounded-full bg-foreground px-5 py-2 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
               >
-                Email me
+                LinkedIn
               </Link>
             </nav>
 
