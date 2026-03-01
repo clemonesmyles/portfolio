@@ -1,6 +1,6 @@
 ---
 title: Improving health outcomes with AI-powered technology
-client: Arthritis NSW
+client: The Arthritis Movement
 summary: Led product strategy and human-centered AI design to create Clara, a digital platform that empowers people living with arthritis through personalised, AI-enabled support.
 year: "2023"
 tags: ["AI", "Healthcare", "Platform Strategy", "Product Leadership"]
@@ -9,7 +9,7 @@ image: /images/projects/arthritis-ai-platform/hero.jpg
 
 ## Overview
 
-Arthritis NSW supports people living with arthritis and musculoskeletal conditions across New South Wales and beyond. Arthritis is a chronic, lifelong condition affecting millions of Australians, yet no two experiences are the same. Symptoms fluctuate, conditions vary widely, and people often need different types of support at different stages of their journey.
+The Arthritis Movement (formerly Arthritis NSW) supports people living with arthritis and musculoskeletal conditions across New South Wales and beyond. Arthritis is a chronic, lifelong condition affecting millions of Australians, yet no two experiences are the same. Symptoms fluctuate, conditions vary widely, and people often need different types of support at different stages of their journey.
 
 While Arthritis NSW had a strong foundation of trusted information, programs, and services, people often struggled to find what was most relevant to them in the moment. Content could feel overwhelming, generic, or difficult to translate into day-to-day action — particularly for people managing pain, fatigue, or emotional strain.
 
@@ -83,15 +83,17 @@ The experience is deliberately calm and human in tone. Rather than leaning into 
 
 Clara was designed as a living product, not a one-off release.
 
-Beyond launch, I've continued to work closely with Arthritis NSW on product shaping and engagement strategy, including notification planning, lifecycle design, and prioritisation of new capabilities. This work focuses on helping people return to the platform at meaningful moments, reinforcing learning, and supporting healthier behaviours over time.
+Beyond launch, I've continued to work closely with The Arthritis Movement on product shaping and engagement strategy, including notification planning, lifecycle design, and prioritisation of new capabilities. This work focuses on helping people return to the platform at meaningful moments, reinforcing learning, and supporting healthier behaviours over time.
 
-Alongside this, we developed a long-term product roadmap outlining how the platform will continue to evolve — expanding its capabilities, deepening personalisation, and introducing new forms of support as user needs and organisational priorities change. The roadmap provides a clear line of sight between near-term delivery and longer-term ambition.
+Alongside this, we developed a long-term product roadmap outlining how the platform will continue to evolve — expanding its capabilities, deepening personalisation, and introducing new forms of support as user needs and organisational priorities change. In early 2026, the platform secured Queensland Government grant funding to accelerate that next phase of development.
 
 ## Impact
 
-Clara has given Arthritis NSW a scalable digital foundation to better support people living with arthritis — combining trusted content, human-centred AI, and thoughtful product design.
+Clara has given The Arthritis Movement a scalable digital foundation to better support people living with arthritis — combining trusted content, human-centred AI, and thoughtful product design.
 
 It has improved access to relevant, credible information, enabled more personalised support at scale, and created new pathways for engagement, acquisition, and long-term value. Just as importantly, it has equipped the organisation with the strategic clarity and confidence to continue investing in digital capability responsibly.
+
+Since its 2025 launch, Clara has exceeded 15,000 downloads and been recognised across multiple industry awards: a **Good Design Award** (2025), a **Webby Award Honoree** in AI Apps & Experiences — Health & Wellness (2025), and an **AGDA Award** in the Websites category (2024).
 
 This project demonstrates how AI can be applied thoughtfully in a health context — not as a replacement for clinical care, but as a supportive layer that helps people make sense of complex information and feel more in control of their condition.
 
