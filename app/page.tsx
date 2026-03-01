@@ -23,7 +23,7 @@ export default function Home() {
   const featuredCaseStudies = [
     getCaseStudy('arthritis-ai-platform'),
     getCaseStudy('dva-digital-transformation'),
-  ].filter(Boolean)
+  ].filter((cs): cs is NonNullable<typeof cs> => cs !== null)
 
   return (
     <>
