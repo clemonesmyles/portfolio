@@ -40,7 +40,7 @@ export default function Home() {
               </FadeIn>
               <FadeIn delay={0.1}>
                 <p className="text-xl md:text-2xl text-foreground/70 leading-relaxed mb-8 max-w-3xl">
-                  I specialize in early-stage discovery, AI-powered solutions,
+                  I specialise in early-stage discovery, AI-powered solutions,
                   and evidence-based strategy that drives meaningful outcomes.
                 </p>
               </FadeIn>
