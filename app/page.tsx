@@ -5,7 +5,7 @@ import Section from '@/components/ui/Section'
 import FadeIn from '@/components/ui/FadeIn'
 import Button from '@/components/ui/Button'
 import { siteConfig } from '@/lib/config'
-import { getCaseStudies } from '@/lib/content'
+import { getCaseStudies, getCaseStudy } from '@/lib/content'
 import SkillCard, {
   CompassIcon,
   UsersIcon,
@@ -20,7 +20,10 @@ import Testimonials from '@/components/Testimonials'
 import LogoScroll from '@/components/about/LogoScroll'
 
 export default function Home() {
-  const featuredCaseStudies = getCaseStudies().slice(0, 2)
+  const featuredCaseStudies = [
+    getCaseStudy('arthritis-ai-platform'),
+    getCaseStudy('dva-digital-transformation'),
+  ].filter(Boolean)
 
   return (
     <>
